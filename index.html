@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div id="poster">
+            <img src="/assets/images/halie-west-25xggax4bSA-unsplash.jpg">
+            <div id="footer">Photo by</div>
+        </div>
+        <div id="content">
+            <div id="title">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <emp>now</emp> to get started.</p>
+                <p>You <emp>know</emp> you want to.</p>
+            </div>
+            <div id="input">
+                <form action="/script.js" method="post">
+                    <fieldset>
+                        <legend>Let's do this!</legend>
+
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="name">
+
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="name">
+
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email">
+
+                        <label for="phone_number">PHONE NUMBER</label>
+                        <input type="tel" id="phone_number" name="phone_number">
+
+                        <label for="user_password">PASSWORD</label>
+                        <input type="password" id="user_password" name="password">
+
+                        <label for="confirm_password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm_password" name="confirm_password">
+                    </fieldset>
+                    <button>Create Account</button>
+                </form>
+            </div>
+            <div id="log-in">
+                Already have an account?
+                <a href="">Log in</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

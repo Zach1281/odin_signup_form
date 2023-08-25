@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+@font-face {
+    font-family: norse-bold;
+    src: url('/assets/fonts/Norse-Bold.otf');
+}
+
+
+
+:root {
+    --page-color: #F23AED
+}
+
+* {
+    /* background-color: rgb(41, 41, 41); */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+#poster {
+    display: flex;
+    flex-direction: column;
+}
+
+#poster > img {
+    width: 100px;
+    z-index: -1;
+}
