@@ -14,7 +14,7 @@
                 <img src="./assets/images/odin-lined.png" alt="Odin Project Logo">
                 <p>ODIN</p>
             </div>
-            <div id="footer">Photo by</div>
+            <div id="footer">Photo by Joe Mama</div>
         </div>
         <div id="content">
             <div id="title">
@@ -22,37 +22,40 @@
                 <p>You <emp>know</emp> you want to.</p>
             </div>
             <div id="input-area">
-                <form action="/script.js" method="post">
+                <form id="my-form" method="post">
                     <fieldset>
                         <legend>Let's do this!</legend>
-                        <div id="left">
-                            <div id="input">
-                                <label for="first_name">FIRST NAME</label>
-                                <input type="text" id="first_name" name="name">
+                        <div id="input-box">
+                            <div id="left">
+                                <div id="input">
+                                    <label for="first_name">FIRST NAME</label>
+                                    <input type="text" id="first_name" name="name" placeholder="Jane" required>
+                                </div>
+                                <div id="input">
+                                    <label for="email">EMAIL</label>
+                                    <input type="email" id="email" name="email" placeholder="jane.doe@gmail.com">
+                                </div>
+                                <div id="input">
+                                    <label for="user_password">PASSWORD</label>
+                                    <input minlength="8" type="password" id="user_password" name="password"
+                                        placeholder="johnGreen123!" required>
+                                </div>
                             </div>
-                            <div id="input">
-                                <label for="email">EMAIL</label>
-                                <input type="email" id="email" name="email">
-                            </div>
-                            <div id="input">
-                                <label for="user_password">PASSWORD</label>
-                                <input type="password" id="user_password" name="password">
+                            <div id="right">
+                                <div id="input">
+                                    <label for="last_name">LAST NAME</label>
+                                    <input type="text" id="last_name" name="name" placeholder="Doe" required>
+                                </div>
+                                <div id="input">
+                                    <label for="phone_number">PHONE NUMBER</label>
+                                    <input type="tel" id="phone_number" name="phone_number" placeholder="(123)423-9000">
+                                </div>
+                                <div id="input">
+                                    <label for="confirm_password">CONFIRM PASSWORD</label>
+                                    <input type="password" id="confirm_password" name="confirm_password">
+                                </div>
                             </div>
                         </div>
-                        <div id="right">
-                            <div id="input">
-                                <label for="last_name">LAST NAME</label>
-                                <input type="text" id="last_name" name="name">
-                            </div>
-                            <div id="input">
-                                <label for="phone_number">PHONE NUMBER</label>
-                                <input type="tel" id="phone_number" name="phone_number">
-                            </div>
-                            <div id="input">
-                                <label for="confirm_password">CONFIRM PASSWORD</label>
-                                <input type="password" id="confirm_password" name="confirm_password">
-                            </div>
-                        </div>   
                     </fieldset>
                     <button>Create Account</button>
                 </form>

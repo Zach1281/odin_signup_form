@@ -12,60 +12,71 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2rem;
 }
+
+
 
 main {
     display: flex;
+    flex-direction: column;
 }
 
 #poster {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    height: 100vh;
+    max-width: 100%;
+    min-height: 24rem;
     background-image: url(./assets/images/halie-west-25xggax4bSA-unsplash.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
-    justify-content: flex-end;
-    gap: 60%;
+    justify-content: center;
+    position: relative;
 }
 
 #logo {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.678);
+    background-color: rgba(0, 0, 0, 0.651);
     width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-#logo > p, #logo > img {
-    padding: 15px;
+#logo > img {
+    max-width: 4rem;
+    padding: 10px;
 }
 
 #logo > p {
-    font-family: 'norse-bold';
     color: white;
-    font-size: 112px;
+    font-family: 'norse-bold', 'Ubuntu', sans-serif;
+    font-size: 4rem;
 }
-#logo > img {
-    width: 10vw;
-    flex-shrink: 0;
-}
-#poster > #footer {
+
+#footer {
     color: white;
-    padding-bottom: 1vh;
+    padding-bottom: 1rem;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem;
+    font-size: 0.8rem;
 }
 
 #content {
     display: flex;
     flex-direction: column;
     flex: 1;
-    justify-content: space-evenly;
-    padding: 0 50px 0;
+    justify-content: center;
+    padding: 0 1rem 0 1rem;
+    gap: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 #title {
@@ -75,28 +86,28 @@ main {
 
 fieldset {
     border: none;
-    display: flex;
 }
 
 #input {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
     font-size: 15px;
     margin: 8px;
+    min-width: 15rem;
+}
+
+label {
+    font-size: 1rem;
 }
 
 legend {
     font-size: 25px;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 input {
     border-radius: 5px;
-    border-width: thin;
-    border-color:aliceblue;
-    margin: 5px;
-    padding: 5px;
+    border: 1px solid rgb(102, 103, 104);
+    max-width: 15rem;
 }
 
 button {
@@ -108,3 +119,58 @@ button {
     border-radius: 5px;
     font-weight: 500;
 }
+
+button:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 3px;
+}
+
+#user_password:invalid, #confirm_password:invalid {
+    border: 1px solid red;
+}
+
+#log-in {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#log-in > a {
+    color:#596D48;
+    text-decoration: none;
+}
+
+
+/*
+    when on desktop larger than 768px, switch to rows
+*/
+@media (min-width: 768px){
+    main {
+        flex-direction: row;
+    }
+
+    #poster {
+        width: 40vw;
+        height: 100vh;
+    }
+
+    #content {
+        width: 60vw;
+        height: 100vh;
+    }
+
+    #input-box {
+        display: flex;
+        width: 60vw;
+        gap: 1rem;
+    }
+
+    button {
+        width: 15rem;
+    }
+}
+
